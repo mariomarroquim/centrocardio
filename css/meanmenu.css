@@ -3,7 +3,7 @@
 
 	MeanMenu 2.0.6
 	--------
-	
+
 	To be used with jquery.meanmenu.js by Chris Wharton (http://www.meanthemes.com/plugins/meanmenu/)
 
 ####################################################################### */
@@ -21,7 +21,7 @@ a.meanmenu-reveal {
 	background: #0c1923;
 	padding: 4px 0;
 	min-height: 42px;
-	z-index: 999999;
+	z-index: 9999;
 }
 
 .mean-container a.meanmenu-reveal {
