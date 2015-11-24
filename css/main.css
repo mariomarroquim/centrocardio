@@ -612,11 +612,13 @@ select {
 /*  Header styles
 /*------------------------------------------------------*/
 .header-top {
-  background-color: #F0F5F7;
+  background-color: #F15B5A;
   padding: 8px 0;
+  -webkit-box-shadow:inset 0 -1px 2px 1px #e00000;
+  box-shadow:inset 0 -1px 2px 1px #e00000;
 }
 .header-top p {
-  color: #000000;
+  color: #ffffff;
 }
 .header-top p span {
   font-weight: bold;
@@ -1124,8 +1126,12 @@ nav.main-menu ul > .current-menu-item > a {
 .features-var-three .single-feature h5 a {
   font-size: 18px;
 }
-.features-var-three .single-feature p {
+.features-var-three .single-feature p, .features-var-three .single-feature a {
   color: #b0b1b6;
+}
+
+.features-var-three .single-feature a:hover, .features-var-three .single-feature a:focus {
+  color: #F15B5A;
 }
 .features-var-three .feature-icon img {
   -webkit-transition-duration: 0.5s;
@@ -1147,7 +1153,7 @@ nav.main-menu ul > .current-menu-item > a {
 /*------------------------------------------------------*/
 .home-doctors {
   text-align: center;
-  padding: 86px 0 80px;
+  padding: 86px 0 86px;
 }
 .home-doctors .common-doctor {
   background-color: #fff;
@@ -3676,4 +3682,23 @@ table tbody tr {
 .header-top .btn:hover, .header-top .btn:focus,
   .footer-bottom .btn:hover, .footer-bottom .btn:focus {
   color: #ffffff;
+}
+
+.partner {
+  height: 140px;
+}
+
+.plans {
+  height: 140px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+h2.soft-title span {
+  color: #a3a3a3 !important;
+  font-weight: 300;
+}
+
+h5.subtitle {
+  margin: 20px 0px 20px 0px;
 }
