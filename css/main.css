@@ -3688,12 +3688,6 @@ table tbody tr {
   height: 140px;
 }
 
-.plans {
-  height: 140px;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
 h2.soft-title span {
   color: #a3a3a3 !important;
   font-weight: 300;
