@@ -3702,3 +3702,7 @@ h5.subtitle {
 iframe {
   border: 1px solid #b1b4b5;
 }
+
+#appointment-submit {
+  width: 100%;
+}

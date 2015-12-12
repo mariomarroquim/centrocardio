@@ -169,20 +169,20 @@
             </div>
             <div class="clearfix">
                 <div class="appointment-form clearfix animated">
-                    <form id="form-appointment" class="clearfix" target="self_" action="javascript: submitToGoogle()" novalidate="novalidate">
+                    <form id="form-appointment" class="clearfix" target="self_" action="javascript: submitAppointment()" novalidate="novalidate">
                         <div class="col-md-3 col-sm-6 common">
-                            <input type="text" id="name" name="name" class="required" placeholder="Nome"/>
+                            <input type="text" id="name" name="name" class="required" placeholder="Nome*"/>
                         </div>
                         <div class="col-md-3 col-sm-6 common">
-                            <input type="text" id="telephone" name="telephone" class="required number" placeholder="Telefone"/>
+                            <input type="text" id="telephone" name="telephone" class="required number" placeholder="Telefone*"/>
                         </div>
                         <div class="col-md-3 col-sm-6 common">
-                            <input type="email" id="email" name="email" class="required email" placeholder="Email"/>
+                            <input type="email" id="email" name="email" class="required email" placeholder="Email*"/>
                         </div>
                         <div class="col-md-3 col-sm-6 common">
                             <input type="text" id="date" name="date" class="required" placeholder="Data"/>
                         </div>
-                        <div class="col-sm-11 common custom-col-form">
+                        <div class="col-lg-10 col-md-10 col-sm-9 common">
                             <select id="doctor" name="doctor">
                                 <option value="">Escolha o Médico</option>
                                 <option value="Dr. Alcino Pereira de Sá Filho">Dr. Alcino Pereira de Sá Filho</option>
@@ -206,12 +206,8 @@
                                 <option value="Não sabe">Não tenho certeza</option>
                             </select>
                         </div>
-                        <div class="col-sm-1 common custom-col-button">
-                            <input type="submit" name="Submit" class="btn" value="Enviar"/>
-                        </div>
-                        <div>
-                            <img src="images/white-loader.gif" id="appointment-loader" alt="Enviando..."/>
-                            <div id="message-sent"></div>
+                        <div class="col-lg-2 col-md-2 col-sm-3 common custom-col-button">
+                            <input type="submit" id="appointment-submit" name="Submit" class="btn" value="Enviar"/>
                         </div>
                     </form>
                 </div>
