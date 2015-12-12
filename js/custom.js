@@ -758,14 +758,14 @@ function submitAppointment(){
         }
     }
 
-/*
+
     $.ajax({
        type: "POST",
        url: "sendmail.php",
        async: true,
        data: {"name" : name, "telephone" : telephone, "email" : email, "date" : date, "doctor" : doctor},
 
-       beforeSubmit: function() {
+       beforeSend: function() {
             $("#appointment-submit").val("Aguarde...");
        },
 
@@ -784,8 +784,8 @@ function submitAppointment(){
             sweetAlert("Obrigado!", "<b>Isto <u>não</u> é uma confirmação de agendamento</b>.<br/><br/>Aguarde, pois em breve entraremos em contato com você para confirmar o agendamento.", "success");
        }
     });
-*/
 
+/*
     $.ajax({
       url: "https://docs.google.com/forms/d/1ap8MaKAUHS2s8ibBBY8t7YuZhMVf50M-he51OCI3Ev8/formResponse",
       data: {"entry.250128038" : name, "entry.1830931570" : telephone, "entry.1086604454" : email, "entry.1903886770" : date, "entry.1273217573" : doctor},
@@ -811,7 +811,7 @@ function submitAppointment(){
         }
       }
     });
-
+*/
 }
 
 function validateEmail(email) {
