@@ -169,7 +169,7 @@
             </div>
             <div class="clearfix">
                 <div class="appointment-form clearfix animated">
-                    <form id="form-appointment" class="clearfix" target="self_" action="javascript: submitAppointment()" novalidate="novalidate">
+                    <form id="form-appointment" class="clearfix" action="#" onsubmit="return false;" novalidate="novalidate">
                         <div class="col-md-3 col-sm-6 common">
                             <input type="text" id="name" name="name" class="required" placeholder="Nome*"/>
                         </div>
@@ -207,7 +207,7 @@
                             </select>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-3 common custom-col-button">
-                            <input type="submit" id="appointment-submit" name="Submit" class="btn" value="Enviar"/>
+                            <input type="submit" id="appointment-submit" class="btn" value="Enviar" onclick="submitAppointment()"/>
                         </div>
                     </form>
                 </div>

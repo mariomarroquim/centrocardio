@@ -758,7 +758,6 @@ function submitAppointment(){
         }
     }
 
-
     $.ajax({
        type: "POST",
        url: "sendmail.php",
@@ -784,6 +783,8 @@ function submitAppointment(){
             sweetAlert("Obrigado!", "<b>Isto <u>não</u> é uma confirmação de agendamento</b>.<br/><br/>Aguarde, pois em breve entraremos em contato com você para confirmar o agendamento.", "success");
        }
     });
+
+    return true;
 
 /*
     $.ajax({
