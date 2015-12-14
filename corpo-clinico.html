@@ -63,6 +63,15 @@
 </head>
 <body>
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.5&appId=496787470480847";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <!--[if lt IE 7]>
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="<php echo 'http://www.google.com/chromeframe/?redirect=true'; ?>">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
@@ -130,7 +139,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 text-center">
                 <div class="common-doctor clearfix">
                     <figure>
-                        <img src="images/doctors/alcino.jpg" alt="Doutor 1"/>
+                        <img src="images/medicos/alcino.jpg" alt="Doutor 1"/>
                     </figure>
                     <div class="text-content">
                         <h5>Dr. Alcino Sá</h5>
@@ -149,7 +158,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 text-center">
                 <div class="common-doctor clearfix">
                     <figure>
-                        <img src="images/doctors/alexandre.jpg" alt="Doutor 2"/>
+                        <img src="images/medicos/alexandre.jpg" alt="Doutor 2"/>
                     </figure>
                     <div class="text-content">
                         <h5>Dr. Alexandre Adad</h5>
@@ -311,7 +320,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 text-center">
                 <div class="common-doctor animated fadeInUp clearfix">
                     <figure>
-                        <img src="images/doctors/leandro.jpg" alt="Doutor 10"/>
+                        <img src="images/medicos/leandro.jpg" alt="Doutor 10"/>
                     </figure>
                     <div class="text-content">
                         <h5>Dr. Leandro Fernandes</h5>
@@ -454,7 +463,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 text-center">
                 <div class="common-doctor animated fadeInUp clearfix">
                     <figure>
-                        <img src="images/doctors/recio.jpg" alt="Doutor 17">
+                        <img src="images/medicos/recio.jpg" alt="Doutor 17">
                     </figure>
                     <div class="text-content">
                         <h5>Dr. Récio Cronemberger</h5>
@@ -519,6 +528,8 @@
                                 <a href="servicos.html">Serviços</a>
                                 &nbsp;&middot;&nbsp;
                                 <a href="corpo-clinico.html">Corpo Clínico</a>
+                                &nbsp;&middot;&nbsp;
+                                <a href="http://webmail.centrocardio.com.br">Webmail</a>
                             </strong>
                         </p>
 
