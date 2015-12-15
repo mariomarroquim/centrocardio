@@ -182,7 +182,10 @@
                         <div class="col-md-3 col-sm-6 common">
                             <input type="text" id="date" name="date" class="required" placeholder="Data"/>
                         </div>
-                        <div class="col-lg-10 col-md-10 col-sm-9 common">
+                        <div class="col-lg-3 col-md-3 col-sm-6 common">
+                            <input type="text" id="birth" name="birth" class="required" placeholder="Nascimento"/>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-6 common">
                             <select id="doctor" name="doctor">
                                 <option value="">Escolha o Médico</option>
                                 <option value="Dr. Alcino Pereira de Sá Filho">Dr. Alcino Pereira de Sá Filho</option>
@@ -206,7 +209,8 @@
                                 <option value="Não sabe">Não tenho certeza</option>
                             </select>
                         </div>
-                        <div class="col-lg-2 col-md-2 col-sm-3 common custom-col-button">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 common custom-col-button">
+                            <div class="visible-xs" style="margin-top: 14px;"></div>
                             <input type="submit" id="appointment-submit" class="btn" value="Enviar" onclick="submitAppointment()"/>
                         </div>
                     </form>

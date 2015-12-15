@@ -535,6 +535,7 @@
     /*-----------------------------------------------------------------*/
     if (jQuery().datepicker) {
         $("#date").datepicker();
+        $("#birth").datepicker();
     }
 
 
@@ -736,14 +737,15 @@ function submitAppointment(){
     var telephone = $("#telephone").val();
     var email = $("#email").val();
     var date = $("#date").val();
+    var birth = $("#birth").val();
     var doctor = $("#doctor").val();
 
-    if (name == "" || telephone == "" || email == "") {
-        sweetAlert("Importante", "Preencha ao menos seu nome, telefone e email.", "error");
+    if (name == "" || (telephone == "" && email == "")) {
+        sweetAlert("Importante", "Preencha ao menos seu nome e uma forma de contato (telefone ou email).", "error");
         return false;
     }
 
-    if(!validateEmail(email)){
+    if(email != "" && !validateEmail(email)){
         sweetAlert("Importante", "Preencha o agendamento com um email válido.", "error");
         return false;
     }
@@ -754,6 +756,15 @@ function submitAppointment(){
 
         if(appointment_date <= yesterday){
             sweetAlert("Importante", "Preencha o agendamento com uma data válida.", "error");
+            return false;
+        }
+    }
+
+    if(birth != ""){
+        var birth_date = $("#birth").datepicker("getDate");
+
+        if(birth_date > new Date()){
+            sweetAlert("Importante", "Preencha o nascimento com uma data válida.", "error");
             return false;
         }
     }

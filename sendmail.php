@@ -2,8 +2,14 @@
 
 $name = $_POST["name"];
 $telephone = $_POST["telephone"];
+
 $email = $_POST["email"];
+if ($email == "") {
+    $email = "agendamento@centrocardio.com.br";
+}
+
 $date = $_POST["date"];
+$birth = $_POST["birth"];
 $doctor = $_POST["doctor"];
 
 $destiny = "agendamento@centrocardio.com.br";
@@ -15,8 +21,9 @@ $body = "Olá, tudo bom?\r\n\nSeguem os dados do paciente para contato e confirm
     . "Telefone: "  . $telephone    . "\r\n"
     . "Email: "     . $email        . "\r\n"
     . "Data: "      . $date         . "\r\n"
+    . "Nascimento: ". $birth        . "\r\n"
     . "Médico: "    . $doctor       . "\r\n\n"
-    . "Você pode responder a esta mensagem para se comunicar diretamente com o paciente.\r\n\n"
+    . "Você pode responder a esta mensagem para se comunicar diretamente com o paciente se ele tiver informado um email.\r\n\n"
     . "Atenciosamente,\r\n\n"
     . "Website do Centrocardio\r\n"
     . "http://www.centrocardio.com.br";
