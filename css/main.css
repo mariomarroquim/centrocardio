@@ -670,7 +670,7 @@ select {
 }
 nav.main-menu {
   float: right;
-  margin-top: 17px;
+  margin-top: 20px;
 }
 nav.main-menu ul {
   list-style: none;
@@ -686,10 +686,12 @@ nav.main-menu ul > li > a {
   width: 100%;
   display: block;
   padding: 8px 15px;
-  text-decoration: none;
-  color: #60646d;
+  padding-bottom: 6px;
+  color: #9e3f42;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
   text-align: left;
 }
 nav.main-menu ul > li ul {
@@ -3705,6 +3707,11 @@ iframe {
 
 #appointment-submit {
   width: 100%;
+}
+
+select#doctor {
+  line-height: 18px;
+  padding-left: 1px;
 }
 
 select#doctor option {
