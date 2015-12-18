@@ -771,9 +771,9 @@ function submitAppointment(){
 
     $.ajax({
        type: "POST",
-       url: "sendmail.php",
+       url: "submit-appointment.php",
        async: true,
-       data: {"name" : name, "telephone" : telephone, "email" : email, "date" : date, "doctor" : doctor},
+       data: {"name" : name, "telephone" : telephone, "email" : email, "date" : date, "birth" : birth, "doctor" : doctor},
 
        beforeSend: function() {
             $("#appointment-submit").val("Aguarde...");
@@ -796,34 +796,51 @@ function submitAppointment(){
     });
 
     return true;
+}
 
-/*
+function submitContact(){
+    var name = $("#name").val();
+    var telephone = $("#telephone").val();
+    var email = $("#email").val();
+    var message = $("#message").val();
+
+    if (name == "" || message == "" || (telephone == "" && email == "")) {
+        sweetAlert("Importante", "Preencha ao menos seu nome, uma forma de contato (telefone ou email) e a mensagem.", "error");
+        return false;
+    }
+
+    if(email != "" && !validateEmail(email)){
+        sweetAlert("Importante", "Preencha o formulário com um email válido.", "error");
+        return false;
+    }
+
     $.ajax({
-      url: "https://docs.google.com/forms/d/1ap8MaKAUHS2s8ibBBY8t7YuZhMVf50M-he51OCI3Ev8/formResponse",
-      data: {"entry.250128038" : name, "entry.1830931570" : telephone, "entry.1086604454" : email, "entry.1903886770" : date, "entry.1273217573" : doctor},
-      type: "POST",
-      dataType: "xml",
-      statusCode: {
-        0: function (){
-          sweetAlert("Obrigado!", "<b>Isto <u>não</u> é uma confirmação de agendamento</b>.<br/><br/>Aguarde, pois em breve entraremos em contato com você para confirmar o agendamento.", "success");
-          $("#form-appointment").resetForm();
-        },
-        200: function (){
-          sweetAlert("Obrigado!", "<b>Isto <u>não</u> é uma confirmação de agendamento</b>.<br/><br/>Aguarde, pois em breve entraremos em contato com você para confirmar o agendamento.", "success");
-          $("#form-appointment").resetForm();
-        },
-        400: function (){
-          sweetAlert("Algo de errado aconteceu", "Por favor, tente novamente mais tarde.", "error");
-        },
-        404: function (){
-          sweetAlert("Algo de errado aconteceu", "Por favor, tente novamente mais tarde.", "error");
-        },
-        500: function (){
-          sweetAlert("Algo de errado aconteceu", "Por favor, tente novamente mais tarde.", "error");
-        }
-      }
+       type: "POST",
+       url: "submit-contact.php",
+       async: true,
+       data: {"name" : name, "telephone" : telephone, "email" : email, "message" : message},
+
+       beforeSend: function() {
+            $("#contact-submit").val("Aguarde...");
+       },
+
+       error: function(reponse) {
+            console.log(response);
+
+            $("#contact-submit").val("Enviar");
+            sweetAlert("Algo de errado aconteceu", "Por favor, tente novamente mais tarde.", "error");
+       },
+
+       success: function(response) {
+            console.log(response);
+
+            $("#form-contact").resetForm();
+            $("#contact-submit").val("Enviar");
+            sweetAlert("Obrigado pela mensagem!", "", "success");
+       }
     });
-*/
+
+    return true;
 }
 
 function validateEmail(email) {

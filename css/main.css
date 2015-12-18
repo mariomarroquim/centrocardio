@@ -3717,3 +3717,16 @@ select#doctor {
 select#doctor option {
   background-color: #ffffff;
 }
+
+.contact-sidebar .timetable-area, .contact-sidebar .address-area, .contact-sidebar .social-icon {
+  border: none;
+}
+
+.contact-sidebar p {
+  color: #7b7d85;
+  margin-bottom: 18px;
+}
+
+.contact-sidebar span {
+  font-weight: bold;
+}
