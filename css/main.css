@@ -3730,3 +3730,12 @@ select#doctor option {
 .contact-sidebar span {
   font-weight: bold;
 }
+
+#main-footer h3.title, #contact h5.subtitle {
+  padding-bottom: 6px;
+  border-bottom: 1px solid #96979b;
+}
+
+form select#scolarship form select#scolarship option{
+  color: #9ba0aa !important;
+}

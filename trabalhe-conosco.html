@@ -133,50 +133,60 @@
     </div>
 </header>
 
-<div id="contact" class="faq-page clearfix">
+<div class="faq-page clearfix">
     <div class="container">
-        <div class="slogan-section clearfix" style="margin-top: 34px; margin-bottom: 30px;">
-            <h2><span>Entre em Contato</span></h2>
+        <div class="slogan-section clearfix" style="margin-top: 34px; margin-bottom: 50px;">
+            <h2><span>Trabalhe Conosco</span></h2>
         </div>
 
         <div class="row">
-            <div class="col-sm-6">
-                <h5 class="subtitle">Envie Sua Dúvida / Sugestão</h5>
-                <p>Responderemos com satisfação o mais breve possível.</p>
+            <div class="col-sm-8 col-sm-offset-2">
+                <form id="form-curriculum" class="clearfix" action="#" onsubmit="return false;" novalidate="novalidate">
+                    <div class="col-sm-10">
+                        <input type="text" name="name" id="name" placeholder="Nome*"/>
+                    </div>
 
-                <br/>
+                    <div class="col-sm-2">
+                        <input type="text" name="age" id="age" placeholder="Idade*"/>
+                    </div>
 
-                <form id="form-contact" class="clearfix" action="#" onsubmit="return false;" novalidate="novalidate">
-                    <input type="text" name="name" id="name" placeholder="Nome*"/>
-                    <input type="text" name="telephone" id="telephone" placeholder="Telefone*"/>
-                    <input type="email" name="email" id="email" class="email" placeholder="Email*"/>
-                    <textarea name="message" id="message" placeholder="Mensagem*" style="height: 264px;"></textarea>
-                    <input id="contact-submit" type="submit" value="Enviar" onclick="submitContact()"/>
-                    <div class="hidden-xs" style="margin-top: 30px;"></div>
+                    <div class="col-sm-5">
+                        <input type="text" name="telephone" id="telephone" placeholder="Telefone*"/>
+                    </div>
+
+                    <div class="col-sm-7">
+                        <input type="email" name="email" id="email" class="email" placeholder="Email*"/>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <select name="scolarship" id="scolarship" style="color: #9ba0aa">
+                            <option value="">Escolaridade*</option>
+                            <option value="Superior completo">Superior completo</option>
+                            <option value="Superior incompleto">Superior incompleto</option>
+                            <option value="Médio completo">Médio completo</option>
+                            <option value="Médio incompleto">Médio incompleto</option>
+                            <option value="Fundamental completo">Fundamental completo</option>
+                            <option value="Fundamental incompleto">Fundamental incompleto</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <textarea name="academic-formation" id="academic-formation" placeholder="Formação Acadêmica*" rows="4"></textarea>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <textarea name="professional-experience" id="professional-experience" placeholder="Experiência Profissional" rows="4"></textarea>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <textarea name="professional-formation" id="professional-formation" placeholder="Formação Profissional / Cursos Realizados" rows="4"></textarea>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <input id="curriculum-submit" type="submit" value="Enviar" onclick="submitCurriculum()"/>
+                        <div style="margin-top: 25px;"></div>
+                    </div>
                 </form>
-            </div>
-
-            <div class="col-sm-6">
-                <div class="contact-sidebar clearfix">
-                    <article class="address-area clearfix">
-                        <h5 class="subtitle">Nossos Contatos</h5>
-
-                        <p>Telefone: <strong>(86) 3198-0100</strong></p>
-                        <p>WhatsApp: <strong>(86) 99993-5958</strong></p>
-                        <p>Plantão / HTI: <strong>(86) 4009-1111</strong></p>
-                        <p>Agendamento Fácil: <strong><a href="index.html">Clique aqui</a></strong></p>
-
-                        <h5 class="subtitle">Localização</h5>
-
-                        <p>
-                            <strong>Rua Lucício Freitas, 1881 - Mafuá, Teresina (PI)</strong>.
-                            <br/>
-                            Segunda a Sexta, das 07:00 às 19:00 e Sábado, das 07:00 às 12:00.
-                        </p>
-
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.1528695831366!2d-42.81572408458109!3d-5.078959152953379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x78e39c50f025835%3A0x6f237c91df250a3c!2sR.+Luc%C3%ADdio+Freitas%2C+1881+-+Centro%2C+Teresina+-+PI%2C+64000-440!5e0!3m2!1spt-BR!2sbr!4v1446491494946" width="100%" height="217" frameborder="0" allowfullscreen></iframe>
-                    </article>
-                </div>
             </div>
         </div>
         <br/>

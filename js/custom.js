@@ -836,7 +836,63 @@ function submitContact(){
 
             $("#form-contact").resetForm();
             $("#contact-submit").val("Enviar");
-            sweetAlert("Obrigado pela mensagem!", "", "success");
+            sweetAlert("Obrigado pela mensagem!", "Já recebemos uma notificação e responderemos o mais breve possível.", "success");
+       }
+    });
+
+    return true;
+}
+
+function submitCurriculum(){
+    var name = $("#name").val();
+    var age = $("#age").val();
+    var telephone = $("#telephone").val();
+    var email = $("#email").val();
+    var scolarship = $("#scolarship").val();
+    var academic_formation = $("#academic-formation").val();
+    var professional_experience = $("#professional-experience").val();
+    var professional_formation = $("#professional-formation").val();
+
+    if (name == "" || age == "" || (telephone == "" && email == "") || scolarship == "" || academic_formation == "") {
+        sweetAlert("Importante", "Preencha ao menos seu nome, idade uma forma de contato (telefone ou email), escolaridade e formação acadêmica.", "error");
+        return false;
+    }
+
+    if(email != "" && !validateEmail(email)){
+        sweetAlert("Importante", "Preencha o formulário com um email válido.", "error");
+        return false;
+    }
+
+    $.ajax({
+       type: "POST",
+       url: "submit-curriculum.php",
+       async: true,
+       data: {"name" : name,
+              "age" : age,
+              "telephone" : telephone,
+              "email" : email,
+              "scolarship" : scolarship,
+              "academic-formation" : academic_formation,
+              "professional-experience" : professional_experience,
+              "professional-formation" : professional_formation},
+
+       beforeSend: function() {
+            $("#curriculum-submit").val("Aguarde...");
+       },
+
+       error: function(reponse) {
+            console.log(response);
+
+            $("#curriculum-submit").val("Enviar");
+            sweetAlert("Algo de errado aconteceu", "Por favor, tente novamente mais tarde.", "error");
+       },
+
+       success: function(response) {
+            console.log(response);
+
+            $("#form-curriculum").resetForm();
+            $("#curriculum-submit").val("Enviar");
+            sweetAlert("Obrigado pelo interesse!", "O seu currículo foi salvo com sucesso em nosso banco de dados.", "success");
        }
     });
 
