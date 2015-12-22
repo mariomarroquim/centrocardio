@@ -1,16 +1,16 @@
 <?php
 
 $name = $_POST["name"];
-$age = $POST["#age"];
-$telephone = $POST["#telephone"];
-$scolarship = $POST["#scolarship"];
-$academic_formation = $POST["#academic-formation"];
-$professional_experience = $POST["#professional-experience"];
-$professional_formation = $POST["#professional-formation"];
+$age = $_POST["#age"];
+$telephone = $_POST["#telephone"];
+$scolarship = $_POST["#scolarship"];
+$academic_formation = $_POST["#academic-formation"];
+$professional_experience = $_POST["#professional-experience"];
+$professional_formation = $_POST["#professional-formation"];
 
 $email = $POST["#email"];
 if ($email == "") {
-    $email = "admn@centrocardio.com.br";
+    $email = "adm@centrocardio.com.br";
 }
 
 $destiny = "adm@centrocardio.com.br";

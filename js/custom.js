@@ -836,7 +836,7 @@ function submitContact(){
 
             $("#form-contact").resetForm();
             $("#contact-submit").val("Enviar");
-            sweetAlert("Obrigado pela mensagem!", "Já recebemos uma notificação e responderemos o mais breve possível.", "success");
+            sweetAlert("Obrigado pela mensagem!", "Responderemos o mais breve possível.", "success");
        }
     });
 
@@ -892,7 +892,7 @@ function submitCurriculum(){
 
             $("#form-curriculum").resetForm();
             $("#curriculum-submit").val("Enviar");
-            sweetAlert("Obrigado pelo interesse!", "O seu currículo foi salvo com sucesso em nosso banco de dados.", "success");
+            sweetAlert("Obrigado pelo interesse!", "O seu currículo foi salvo com sucesso.", "success");
        }
     });
 
