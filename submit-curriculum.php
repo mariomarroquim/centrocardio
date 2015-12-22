@@ -8,7 +8,7 @@ $academic_formation = $_POST["academic-formation"];
 $professional_experience = $_POST["professional-experience"];
 $professional_formation = $_POST["professional-formation"];
 
-$email = $POST["#email"];
+$email = $_POST["email"];
 if ($email == "") {
     $email = "adm@centrocardio.com.br";
 }
