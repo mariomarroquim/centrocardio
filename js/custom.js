@@ -863,6 +863,11 @@ function submitCurriculum(){
         return false;
     }
 
+    if(age != "" && (parseInt(age) == NaN || parseInt(age) < 0 || parseInt(age) > 120)){
+        sweetAlert("Importante", "Preencha o formulário com uma idade válida.", "error");
+        return false;
+    }
+
     $.ajax({
        type: "POST",
        url: "submit-curriculum.php",
