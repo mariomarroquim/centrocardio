@@ -720,83 +720,9 @@
         // Yep, it's Safari =)
         $('body').addClass('safari');
     }
-
-
-
-
-
-
-
-
 });
 
 })(jQuery);
-
-function submitAppointment(){
-    var name = $("#name").val();
-    var telephone = $("#telephone").val();
-    var email = $("#email").val();
-    var date = $("#date").val();
-    var birth = $("#birth").val();
-    var doctor = $("#doctor").val();
-
-    if (name == "" || (telephone == "" && email == "")) {
-        sweetAlert("Importante", "Preencha ao menos seu nome e uma forma de contato (telefone ou email).", "error");
-        return false;
-    }
-
-    if(email != "" && !validateEmail(email)){
-        sweetAlert("Importante", "Preencha o agendamento com um email válido.", "error");
-        return false;
-    }
-
-    if(date != ""){
-        var yesterday = new Date().setDate(new Date().getDate() - 1);
-        var appointment_date = $("#date").datepicker("getDate");
-
-        if(appointment_date <= yesterday){
-            sweetAlert("Importante", "Preencha o agendamento com uma data válida.", "error");
-            return false;
-        }
-    }
-
-    if(birth != ""){
-        var birth_date = $("#birth").datepicker("getDate");
-
-        if(birth_date > new Date()){
-            sweetAlert("Importante", "Preencha o nascimento com uma data válida.", "error");
-            return false;
-        }
-    }
-
-    $.ajax({
-       type: "POST",
-       url: "submit-appointment.php",
-       async: true,
-       data: {"name" : name, "telephone" : telephone, "email" : email, "date" : date, "birth" : birth, "doctor" : doctor},
-
-       beforeSend: function() {
-            $("#appointment-submit").val("Aguarde...");
-       },
-
-       error: function(reponse) {
-            console.log(response);
-
-            $("#appointment-submit").val("Enviar");
-            sweetAlert("Algo de errado aconteceu", "Por favor, tente novamente mais tarde.", "error");
-       },
-
-       success: function(response) {
-            console.log(response);
-
-            $("#form-appointment").resetForm();
-            $("#appointment-submit").val("Enviar");
-            sweetAlert("Obrigado!", "<b>Isto <u>não</u> é uma confirmação de agendamento</b>.<br/><br/>Aguarde, pois em breve entraremos em contato com você para confirmar o agendamento.", "success");
-       }
-    });
-
-    return true;
-}
 
 function submitContact(){
     var name = $("#name").val();

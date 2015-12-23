@@ -184,14 +184,11 @@
                             <input type="email" id="email" name="email" class="email" placeholder="Email*"/>
                         </div>
                         <div class="col-md-3 col-sm-6 common">
-                            <input type="text" id="date" name="date" placeholder="Data"/>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 common">
                             <input type="text" id="birth" name="birth" placeholder="Nascimento"/>
                         </div>
                         <div class="col-lg-7 col-md-7 col-sm-6 common">
                             <select id="doctor" name="doctor">
-                                <option value="">Escolha o Médico...</option>
+                                <option value="">Escolha o Médico</option>
                                 <option value="Dr. Alcino Pereira de Sá Filho">Dr. Alcino Pereira de Sá Filho - Cardiologia Clínica e Ecocardiografia</option>
                                 <option value="Dr. Alexandre Adad Alencar">Dr. Alexandre Adad Alencar - Cardiologia Clínica e Intervencionista</option>
                                 <option value="Dr. Eduardo Antônio Ayremoraes Batista">Dr. Eduardo Antônio Ayremoraes Batista - Cardiologia Clínica</option>
@@ -210,8 +207,11 @@
                                 <option value="Dr. Paulo Márcio Sousa Nunes">Dr. Paulo Márcio Sousa Nunes - Cardiologia Clínica e Intervencionista</option>
                                 <option value="Dr. Récio Cronemberger Mangueira">Dr. Récio Cronemberger Mangueira - Cardiologia / Arritmia / Marca-passo</option>
                                 <option value="Dr. Robert Eudes Nunes de Sousa Segundo">Dr. Robert Eudes Nunes de Sousa Segundo - Angiologia / Cirurgia Vascular e Endovascular</option>
-                                <option value="Não sabe">Não tenho certeza</option>
+                                <option value="">Não tenho certeza</option>
                             </select>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 common">
+                            <input type="text" id="date" name="date" placeholder="Data"/>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 common custom-col-button">
                             <div class="visible-xs" style="margin-top: 14px;"></div>
@@ -530,6 +530,7 @@
 <script type="text/javascript" src="js/respond.min.js"></script>
 <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/appointment.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
