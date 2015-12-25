@@ -29,6 +29,8 @@ var doctorsAvailabilty = {
     "Dr. Robert Eudes Nunes de Sousa Segundo": [5]
 }
 
+var yesterday = new Date().setDate(new Date().getDate() - 1);
+
 function submitAppointment(){
     var name = $("#name").val();
     var telephone = $("#telephone").val();
@@ -50,14 +52,13 @@ function submitAppointment(){
     if(birth != ""){
         var birthDate = $("#birth").datepicker("getDate");
 
-        if(birthDate > new Date()){
+        if(birthDate > yesterday){
             sweetAlert("Importante", "Preencha o agendamento com um nascimento válido.", "error");
             return false;
         }
     }
 
     if(date != ""){
-        var yesterday = new Date().setDate(new Date().getDate() - 1);
         var appointmentDate = $("#date").datepicker("getDate");
 
         if(appointmentDate <= yesterday){
@@ -66,7 +67,7 @@ function submitAppointment(){
         }
         else {
             if($("#doctor").val() != "") {
-                daysAvailable = doctorsAvailabilty[$("#doctor").val()];
+                var daysAvailable = doctorsAvailabilty[$("#doctor").val()];
 
                 if($.inArray(appointmentDate.getUTCDay(), daysAvailable) < 0){
                     var message = "O médico escolhido só atende nos seguintes dias:<br/><br/>";
@@ -106,3 +107,33 @@ function submitAppointment(){
 
     return true;
 }
+
+function checkIfUnavailableAppointmentDate(date) {
+    if(date <= yesterday || date.getUTCDay() == 0){
+        return [false, "", "Indisponível"];
+    }
+
+    var doctor = $("#doctor").val();
+
+    if(doctor != ""){
+        var daysAvailable = doctorsAvailabilty[doctor];
+
+        if($.inArray(date.getUTCDay(), daysAvailable) < 0){
+            return [false, "", "Indisponível"];
+        }
+    }
+
+    return [true, ""];
+}
+
+$("#date").datepicker({beforeShowDay: checkIfUnavailableAppointmentDate});
+
+function checkIfUnavailableBirthDate(date) {
+    if(date > yesterday){
+        return [false, "", "Indisponível"];
+    } else {
+        return [true, ""];
+    }
+}
+
+$("#birth").datepicker({beforeShowDay: checkIfUnavailableBirthDate});

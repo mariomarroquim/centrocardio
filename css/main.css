@@ -3740,3 +3740,7 @@ select#doctor option {
 form select#scolarship form select#scolarship option{
   color: #9ba0aa !important;
 }
+
+td.ui-state-disabled .ui-state-default  {
+  color: pink !important;
+}

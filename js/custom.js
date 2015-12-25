@@ -534,8 +534,7 @@
     /* Date Picker
     /*-----------------------------------------------------------------*/
     if (jQuery().datepicker) {
-        $("#date").datepicker();
-        $("#birth").datepicker();
+
     }
 
 
