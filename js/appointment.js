@@ -14,9 +14,9 @@ var doctorsAvailabilty = {
     "Dr. Eduardo Antônio Ayremoraes Batista": [1,2,3,4],
     "Dr. Emidio Fernandes de Sousa Filho": [1,2,3,4,5,6],
     "Dr. Francisco das Chagas Eulálio Martins Júnior": [1,2,3,4,6],
+    "Dr. Frederico Fonseca de Oliveira": [1,6],
     "Dr. Irapuá Ferreira Ricarte": [1,3],
     "Dr. José Aldemir Teixeira Nunes Júnior": [1,2,3,4,5,6],
-    "Dr. Jonatas Melo Neto": [1,2,3,4,5,6],
     "Dr. José Carlos Formiga Lourenço de Sousa": [1,2,3,4],
     "Dr. Leandro Cardoso Fernandes": [1,2,3,4],
     "Dr. Lucas Teixeira Dias": [1,2,3,5],
@@ -25,6 +25,7 @@ var doctorsAvailabilty = {
     "Dr. Nilo Luiz de Macedo Filho": [1,2,5],
     "Dr. Orlando Irapuan Morais": [1,3,4,5],
     "Dr. Paulo Márcio Sousa Nunes": [1,2,3,4],
+    "Dr. Pedro Henrique M. Craveiro de Melo": [1,2],
     "Dr. Récio Cronemberger Mangueira": [1,2,3,4,5],
     "Dr. Robert Eudes Nunes de Sousa Segundo": [5]
 }
