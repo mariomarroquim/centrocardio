@@ -1,7 +1,7 @@
-README
-======
+Centrocardio
+============
 
-A client's website.
+A client's website using HTML 5, CSS3 and JQuery.
 
 Support
 -------
