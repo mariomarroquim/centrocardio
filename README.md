@@ -1,7 +1,7 @@
 Centrocardio
 ============
 
-A client's website using HTML 5, CSS3 and JQuery.
+A client's website using HTML 5, CSS 3 and JQuery.
 
 Support
 -------
